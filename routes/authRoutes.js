@@ -52,8 +52,8 @@ router.post("/login", async (req, res) => {
     // match cookie lifetime with JWT expiration
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // only https in production
-      sameSite: "lax", // or "none" if using different ports
+      secure: true, 
+      sameSite: "none", //"none"  using different ports
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     }); 
     res.json({ message: "Login successful" });
