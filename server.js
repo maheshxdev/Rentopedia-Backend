@@ -17,7 +17,7 @@ const app = express();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://rentopedia-frontend.vercel.app/"],
+    origin: ["https://rentopedia-frontend.vercel.app"],
     credentials: true,
   })
 );
